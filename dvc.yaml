@@ -4,14 +4,16 @@ stages:
     deps:
     - get_data.py
     outs:
-    - data_raw.csv  
+    - data_raw.csv
+    
   process:
     cmd: python process_data.py
-    deps:
-    - process_data.py
-    - data_raw.csv
+    deps: 
+     - process_data.py
+     - data_raw.csv
     outs:
-    - data_processed.csv
+     - data_processed.csv
+     
   train:
     cmd: python train.py
     deps:
@@ -21,4 +23,8 @@ stages:
     - by_region.png
     metrics:
     - metrics.json:
-        cache: false
+         cache: false # so not to rely on local caches
+         
+    
+     
+   

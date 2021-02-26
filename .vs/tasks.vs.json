@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarefa-process_data",
+      "appliesTo": "process_data.py",
+      "type": "launch"
+    }
+  ]
+}
